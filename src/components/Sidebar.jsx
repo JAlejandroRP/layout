@@ -1,5 +1,5 @@
 import { Menu, Transition } from '@headlessui/react'
-import { links } from '../globals/SidebarLinks'
+import { MyRoutes } from '../globals/Routes'
 import { Link } from "react-router-dom";
 
 export default function Sidebar({ setSelected }) {
@@ -7,8 +7,8 @@ export default function Sidebar({ setSelected }) {
     <Menu>
       {/* <Menu.Button>Options</Menu.Button> */}
       <Menu.Items static={true} className="right-0 m-4 mt-20 origin-top-right  rounded-md  ">
-        {links.map((link, i) => (
-          <div className="px-1 py-1 ">
+        {MyRoutes.map((link, i) => (
+          <div key={i} className="px-1 py-1 ">
 
             <Menu.Item>
               {({ active }) => (
